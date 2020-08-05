@@ -4,57 +4,73 @@ import { dateBuilder } from "./helpers";
 export const MainCard = ({ data }) => {
   const { weather, main, dt, sys, name, wind } = data;
 
+  let hot_background;
+  if (Math.round(main.temp) >= 23) {
+    hot_background = true;
+  } else {
+    hot_background = false;
+  }
+
   return (
-    <>
-      <div className="flexcontainer">
-        <div className="main_card">
-          <div className="main_card__header">
-            <h1 className="main_card__header__location">
-              {name}, {sys.country}
-            </h1>
-            <h2 className="main_card__header__date">
-              <b>
-                {dateBuilder(dt)} | {timeBuilder(dt)}
-              </b>
-            </h2>
+    <div className="flexcontainer">
+      {hot_background ? (
+        <style jsx global>{`
+          #__next {
+            background: #333333 url(/hot-desert.svg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-origin: border-box;
+          }
+        `}</style>
+      ) : (
+        ``
+      )}
+      <div className="main_card">
+        <div className="main_card__header">
+          <h1 className="main_card__header__location">
+            {name}, {sys.country}
+          </h1>
+          <h2 className="main_card__header__date">
+            <b>
+              {dateBuilder(dt)} | {timeBuilder(dt)}
+            </b>
+          </h2>
+        </div>
+        <div className="main_card__flexcontainer">
+          <div className="main_card__flexcontainer__logo">
+            <img
+              className="main_card__logo"
+              src={`https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`}
+              alt="weather_logo"
+            />
           </div>
-          <div className="main_card__flexcontainer">
-            <div className="main_card__flexcontainer__logo">
-              <img
-                className="main_card__logo"
-                src={`https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`}
-                alt="weather_logo"
-              />
-            </div>
-            <div className="main_card__flexcontainer__data">
-              <h3 className="main_card__description">
-                {weather[0].description} {Math.round(main.temp)}°C
-              </h3>
-              <div className="main_card__minordata">
-                <p className="main_card__minordata__realfeel">
-                  Real Feel {Math.round(main.feels_like)}°C
-                </p>
-                <p className="main_card__minordata__minmax">
-                  Min-Max {Math.round(main.temp_min)} / {Math.round(main.temp_max)}°C
-                </p>
-                <p className="main_card__minordata__windspeed">
-                  Wind speed {Math.round(wind.speed)} km/h
-                </p>
-                <p className="main_card__minordata__pressure">
-                  Pressure {Math.round(main.pressure)} hpa
-                </p>
-                <p className="main_card__minordata__humidity">
-                  Humidity {Math.round(main.humidity)}
-                </p>
-              </div>
-              <p className="main_card__sunrisesunset">
-                Sunrise {timeBuilder(sys.sunrise)} | Sunset {timeBuilder(sys.sunset)}
+          <div className="main_card__flexcontainer__data">
+            <h3 className="main_card__description">
+              {weather[0].description} {Math.round(main.temp)}°C
+            </h3>
+            <div className="main_card__minordata">
+              <p className="main_card__minordata__realfeel">
+                Real Feel {Math.round(main.feels_like)}°C
               </p>
+              <p className="main_card__minordata__minmax">
+                Min-Max {Math.round(main.temp_min)} / {Math.round(main.temp_max)}°C
+              </p>
+              <p className="main_card__minordata__windspeed">
+                Wind speed {Math.round(wind.speed)} km/h
+              </p>
+              <p className="main_card__minordata__pressure">
+                Pressure {Math.round(main.pressure)} hpa
+              </p>
+              <p className="main_card__minordata__humidity">Humidity {Math.round(main.humidity)}</p>
             </div>
+            <p className="main_card__sunrisesunset">
+              Sunrise {timeBuilder(sys.sunrise)} | Sunset {timeBuilder(sys.sunset)}
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

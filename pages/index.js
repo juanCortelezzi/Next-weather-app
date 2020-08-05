@@ -7,6 +7,13 @@ const Landing = (props) => {
   if (props.allok !== true)
     return (
       <div className="flexcontainer">
+        <style jsx global>{`
+          body {
+            width: 100vw;
+            height: 100vh;
+          }
+        `}</style>
+        <Form />
         <h2 className="error__main_card">Something Went Wrong</h2>
       </div>
     );

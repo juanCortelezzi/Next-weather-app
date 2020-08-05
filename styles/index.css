@@ -11,7 +11,6 @@ body {
   line-height: 130%;
   margin: 0;
   padding: 0;
-  width: 100%;
   color: #f9f9f9;
   min-width: 330px;
   text-align: center;
@@ -25,8 +24,7 @@ button:focus {
 }
 
 #__next {
-  /*background: #333333 url(winter_mountain.svg) no-repeat;*/
-  background: #333333 url(hot-desert.svg) no-repeat;
+  background: #333333 url(/winter_mountain.svg) no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -51,7 +49,7 @@ Form {
   display: inline-block;
   width: 25px;
   height: 30px;
-  background: transparent url(location-logo.svg) no-repeat;
+  background: transparent url(/location-logo.svg) no-repeat;
   background-position: center;
   background-origin: border-box;
   background-size: contain;
