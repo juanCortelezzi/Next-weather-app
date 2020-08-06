@@ -23,7 +23,7 @@ export default class Form extends React.Component {
   render() {
     return (
       <form autoComplete="off" onSubmit={this.handleSubmit}>
-        <span id="location-logo"></span>
+        <img id="location-logo" src="/location-logo.svg" alt="location logo" />
         <input
           type="text"
           name="q"

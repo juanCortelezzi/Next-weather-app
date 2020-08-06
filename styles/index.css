@@ -46,13 +46,7 @@ Form {
 
 #location-logo {
   cursor: default;
-  display: inline-block;
-  width: 25px;
-  height: 30px;
-  background: transparent url(/location-logo.svg) no-repeat;
-  background-position: center;
-  background-origin: border-box;
-  background-size: contain;
+  width: 20px;
 }
 Form input[type="text"] {
   background-color: transparent;
