@@ -16,14 +16,16 @@ export default class Form extends React.Component {
       Router.push(`/?q=${valid.query}`);
       e.target.reset();
     } else {
-      alert("shit happens");
+      alert(`${this.state.q} is not valid`);
     }
   };
 
   render() {
     return (
       <form autoComplete="off" onSubmit={this.handleSubmit}>
-        <img id="location-logo" src="/location-logo.svg" alt="location logo" />
+        <label htmlFor="q">
+          <img id="location-logo" src="/location-logo.svg" alt="location logo" />
+        </label>
         <input
           type="text"
           name="q"

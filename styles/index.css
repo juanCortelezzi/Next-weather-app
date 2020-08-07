@@ -114,3 +114,34 @@ Form input[type="text"] {
   border-radius: 1rem;
   padding: 1rem;
 }
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #333333cc;
+}
+
+#github_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+#github_link:link {
+  color: #f9f9f9;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#github_link:visited {
+  color: #990099;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#github_link img {
+  width: 30px;
+  margin-right: 0.5rem;
+}

@@ -99,7 +99,7 @@ export const WeekCard = ({ data }) => {
             </div>
 
             <div className="week_card__flexcontainer__data">
-              <h3>{description}</h3>
+              <h2>{description}</h2>
               <p>
                 Morning {Math.round(morn)} Real Feel {Math.round(feels_like.morn)}°C
               </p>
