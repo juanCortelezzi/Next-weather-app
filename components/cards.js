@@ -2,7 +2,7 @@ import { timeBuilder } from "./helpers";
 import { dateBuilder } from "./helpers";
 
 export const MainCard = ({ data }) => {
-  const { weather, main, dt, sys, name, wind } = data;
+  const { weather, main, dt, sys, name, wind, timezone } = data;
 
   let hot_background;
   if (Math.round(main.temp) >= 23) {
@@ -33,7 +33,7 @@ export const MainCard = ({ data }) => {
           </h1>
           <h2 className="main_card__header__date">
             <b>
-              {dateBuilder(dt)} | {timeBuilder(dt)}
+              {dateBuilder(dt, timezone)} | {timeBuilder(dt, timezone)}
             </b>
           </h2>
         </div>
@@ -65,7 +65,8 @@ export const MainCard = ({ data }) => {
               <p className="main_card__minordata__humidity">Humidity {Math.round(main.humidity)}</p>
             </div>
             <p className="main_card__sunrisesunset">
-              Sunrise {timeBuilder(sys.sunrise)} | Sunset {timeBuilder(sys.sunset)}
+              Sunrise {timeBuilder(sys.sunrise, timezone)} | Sunset{" "}
+              {timeBuilder(sys.sunset, timezone)}
             </p>
           </div>
         </div>
@@ -75,7 +76,18 @@ export const MainCard = ({ data }) => {
 };
 
 export const WeekCard = ({ data }) => {
-  const { dt, weather, sunrise, sunset, temp, feels_like, pressure, humidity, wind_speed } = data;
+  const { timezone_offset, daily } = data;
+  const {
+    dt,
+    weather,
+    sunrise,
+    sunset,
+    temp,
+    feels_like,
+    pressure,
+    humidity,
+    wind_speed,
+  } = daily[0];
   const { description, icon } = weather[0];
   const { morn, day, eve, night, min, max } = temp;
 
@@ -85,7 +97,7 @@ export const WeekCard = ({ data }) => {
         <div className="week_card">
           <div className="week_card__header">
             <h1 className="week_card__header__date">
-              <b>{dateBuilder(dt)}</b>
+              <b>{dateBuilder(dt, timezone_offset)}</b>
             </h1>
           </div>
 
@@ -119,7 +131,8 @@ export const WeekCard = ({ data }) => {
               <p>Pressure {Math.round(pressure)} hpa</p>
               <p>Humidity {Math.round(humidity)}</p>
               <p>
-                Sunrise {timeBuilder(sunrise)} | Sunset {timeBuilder(sunset)}
+                Sunrise {timeBuilder(sunrise, timezone_offset)} | Sunset{" "}
+                {timeBuilder(sunset, timezone_offset)}
               </p>
             </div>
           </div>

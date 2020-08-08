@@ -1,9 +1,28 @@
 import validate from "./validate.js";
 import Router from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Spinner from "./spinner.js";
 
 export default function Form() {
   const [q, setq] = useState("");
+  const [loader, setLoader] = useState(false);
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      setLoader(true);
+    };
+    const handleRouteChangeCompleted = () => {
+      setLoader(false);
+    };
+
+    Router.events.on("routeChangeStart", handleRouteChangeStart);
+    Router.events.on("routeChangeComplete", handleRouteChangeCompleted);
+
+    return () => {
+      Router.events.off("routeChangeStart", handleRouteChangeStart);
+      Router.events.off("routeChangeComplete", handleRouteChangeCompleted);
+    };
+  }, []);
 
   const handleChange = ({ target }) => {
     const { value } = target;
@@ -21,6 +40,14 @@ export default function Form() {
     }
   };
 
+  if (loader) {
+    return (
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <Spinner />
+        <p>{q}</p>
+      </form>
+    );
+  }
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
       <label htmlFor="q">

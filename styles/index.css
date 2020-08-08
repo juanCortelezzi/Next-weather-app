@@ -34,6 +34,7 @@ button:focus {
 }
 
 Form {
+  color: #000;
   background-color: #f9f9f9;
   border-radius: 0 0 1rem 1rem;
   padding: 0.5rem 1rem;
@@ -48,12 +49,17 @@ Form {
   cursor: default;
   width: 20px;
 }
+
 Form input[type="text"] {
   background-color: transparent;
   width: 100%;
   padding: 0.5rem 1rem;
   border: none;
   font-size: 1em;
+}
+
+Form p {
+  margin: 0.5rem auto 0.5rem 1rem;
 }
 
 .flexcontainer {
@@ -144,4 +150,55 @@ footer {
 #github_link img {
   width: 30px;
   margin-right: 0.5rem;
+}
+
+/*spinner*/
+
+.spinner {
+  width: 30px;
+  height: 30px;
+
+  position: relative;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }

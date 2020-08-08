@@ -34,7 +34,7 @@ const Landing = (props) => {
       <MainCard data={today_data} />
 
       {week_data.daily.map((x_data) => {
-        return <WeekCard key={x_data.dt} data={x_data} />;
+        return <WeekCard key={x_data.dt} data={week_data} />;
       })}
 
       <footer>
