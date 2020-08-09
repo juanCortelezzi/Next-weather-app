@@ -75,19 +75,9 @@ export const MainCard = ({ data }) => {
   );
 };
 
-export const WeekCard = ({ data }) => {
-  const { timezone_offset, daily } = data;
-  const {
-    dt,
-    weather,
-    sunrise,
-    sunset,
-    temp,
-    feels_like,
-    pressure,
-    humidity,
-    wind_speed,
-  } = daily[0];
+export const WeekCard = ({ data, alldata }) => {
+  const { timezone_offset } = alldata;
+  const { dt, weather, sunrise, sunset, temp, feels_like, pressure, humidity, wind_speed } = data;
   const { description, icon } = weather[0];
   const { morn, day, eve, night, min, max } = temp;
 

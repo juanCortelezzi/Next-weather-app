@@ -34,13 +34,17 @@ const Landing = (props) => {
       <MainCard data={today_data} />
 
       {week_data.daily.map((x_data) => {
-        return <WeekCard key={x_data.dt} data={week_data} />;
+        return <WeekCard key={x_data.dt} data={x_data} alldata={week_data} />;
       })}
 
       <footer>
-        <a href="https://github.com/juanCortelezzi/next-weather-app" id="github_link">
-          <img src="/github-logo.svg" />
+        <a href="https://github.com/juanCortelezzi/next-weather-app" className="footer_link">
+          <img src="/github-logo.svg" alt="github-logo" />
           <p>Github</p>
+        </a>
+        <a href="https://nextweatherapp.herokuapp.com/api/auckland,nz" className="footer_link">
+          <img src="/bash-logo.svg" alt="bash-logo" />
+          Weather CLI
         </a>
       </footer>
     </>

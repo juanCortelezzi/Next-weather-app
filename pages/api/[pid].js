@@ -10,17 +10,20 @@ export default async (req, res) => {
       `
 --------------------------------------------------------------------------------
 
-  server error, "${valid.query}" is not a valid input, expected:
+  Get the weather in your terminal !
 
-  "website/api/{city},{2 letter country code}"
+  curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
 
 --------------------------------------------------------------------------------
 
   if the city name has two or more words, separate them via a "-"
 
+--------------------------------------------------------------------------------
+
   examples:
-  1) website/api/london,gb
-  2) website/api/new-york,us
+  1) https://nextweatherapp.herokuapp.com/api/christchurch,nz
+  2) https://nextweatherapp.herokuapp.com/api/new-york,us
+  3) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
 
 --------------------------------------------------------------------------------
 
@@ -41,7 +44,16 @@ export default async (req, res) => {
 
   if any doubts, please make a quick search in google maps for 
   the city name (or any other site), or search for two letter country
-  code for {your-desired-country}
+  code for your desired country
+
+--------------------------------------------------------------------------------
+
+  if the city name has two or more words, separate them via a "-"
+
+  examples:
+  1) https://nextweatherapp.herokuapp.com/api/christchurch,nz
+  2) https://nextweatherapp.herokuapp.com/api/new-york,us
+  3) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
 
 --------------------------------------------------------------------------------
 
