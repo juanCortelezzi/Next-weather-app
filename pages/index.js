@@ -8,7 +8,7 @@ const Landing = (props) => {
     return (
       <div className="flexcontainer">
         <Head>
-          <title>Weather App</title>
+          <title>Juans Weather App - The CLI For The X User</title>
         </Head>
         <style jsx global>{`
           body {
@@ -26,7 +26,7 @@ const Landing = (props) => {
   return (
     <>
       <Head>
-        <title>Weather App</title>
+        <title>Juans Weather App - The CLI For The X User</title>
       </Head>
 
       <Form />

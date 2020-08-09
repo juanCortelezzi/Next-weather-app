@@ -37,7 +37,11 @@ export default async (req, res) => {
       `
 --------------------------------------------------------------------------------
 
+  curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
+
   server error, "${valid.query}" may not a valid country or city.
+
+  curl https://nextweatherapp.herokuapp.com/api/${valid.query}
 
   please look if the two letter country code is valid, or if the
   city name is correctly spelled.
@@ -485,6 +489,12 @@ export default async (req, res) => {
 
   res.status(200).send(
     `
+--------------------------------------------------------------------------------
+
+  curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
+
+  curl https://nextweatherapp.herokuapp.com/api/${valid.query}
+
 --------------------------------------------------------------------------------
 
   --- ${name}, ${country} ---
