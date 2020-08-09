@@ -51,7 +51,7 @@ export default function Form() {
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
       <label htmlFor="q">
-        <img id="location-logo" src="/location-logo.svg" alt="location logo" />
+        <img id="location-logo" src="/images/location-logo.svg" alt="location logo" />
       </label>
       <input
         type="text"

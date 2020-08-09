@@ -16,7 +16,7 @@ export const MainCard = ({ data }) => {
       {hot_background ? (
         <style jsx global>{`
           #__next {
-            background: #333333 url(/hot-desert.svg) no-repeat;
+            background: #333333 url(/images/hot-desert.svg) no-repeat;
             background-position: center;
             background-size: cover;
             background-attachment: fixed;

@@ -24,7 +24,7 @@ button:focus {
 }
 
 #__next {
-  background: #333333 url(/winter_mountain.svg) no-repeat;
+  background: #333333 url(/images/winter_mountain.svg) no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

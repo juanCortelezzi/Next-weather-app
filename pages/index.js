@@ -39,11 +39,11 @@ const Landing = (props) => {
 
       <footer>
         <a href="https://github.com/juanCortelezzi/next-weather-app" className="footer_link">
-          <img src="/github-logo.svg" alt="github-logo" />
+          <img src="/images/github-logo.svg" alt="github-logo" />
           <p>Github</p>
         </a>
         <a href="https://nextweatherapp.herokuapp.com/api/auckland,nz" className="footer_link">
-          <img src="/bash-logo.svg" alt="bash-logo" />
+          <img src="/images/bash-logo.svg" alt="bash-logo" />
           Weather CLI
         </a>
       </footer>
