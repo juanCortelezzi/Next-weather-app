@@ -1,6 +1,45 @@
 import { timeBuilder } from "./helpers";
 import { dateBuilder } from "./helpers";
 
+const logo_selector = (id) => {
+  const logo_path = `/images/weather_icons/`;
+  const ext = ".svg";
+  switch (id) {
+    case "01d" /*clear day*/:
+      return `${logo_path}${id}${ext}`;
+    case "01n" /*clear night*/:
+      return `${logo_path}${id}${ext}`;
+    case "02d" /*few clouds day*/:
+      return `${logo_path}${id}${ext}`;
+    case "02n" /*few clouds night*/:
+      return `${logo_path}${id}${ext}`;
+    case "03n" /*cloudy*/:
+    case "03d" /*cloudy*/:
+      return `${logo_path}03d${ext}`;
+    case "04n" /*broken clouds*/:
+    case "04d" /*broken clouds*/:
+      return `${logo_path}04d${ext}`;
+    case "09n" /*shower*/:
+    case "09d" /*shower*/:
+      return `${logo_path}09d${ext}`;
+    case "10d" /*rain day*/:
+      return `${logo_path}${id}${ext}`;
+    case "10n" /*rain night*/:
+      return `${logo_path}${id}${ext}`;
+    case "11n" /*thunderstorm*/:
+    case "11d" /*thunderstorm*/:
+      return `${logo_path}11d${ext}`;
+    case "13n" /*snow*/:
+    case "13d" /*snow*/:
+      return `${logo_path}13d${ext}`;
+    case "50n" /*mist*/:
+    case "50d" /*mist*/:
+      return `${logo_path}50d${ext}`;
+    default:
+      return `${logo_path}${id}${ext}`;
+  }
+};
+
 export const MainCard = ({ data }) => {
   const { weather, main, dt, sys, name, wind, timezone } = data;
 
@@ -41,7 +80,7 @@ export const MainCard = ({ data }) => {
           <div className="main_card__flexcontainer__logo">
             <img
               className="main_card__logo"
-              src={`https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`}
+              src={logo_selector(weather[0].icon)}
               alt="weather_logo"
             />
           </div>
@@ -62,7 +101,9 @@ export const MainCard = ({ data }) => {
               <p className="main_card__minordata__pressure">
                 Pressure {Math.round(main.pressure)} hpa
               </p>
-              <p className="main_card__minordata__humidity">Humidity {Math.round(main.humidity)}</p>
+              <p className="main_card__minordata__humidity">
+                Humidity {Math.round(main.humidity)}%
+              </p>
             </div>
             <p className="main_card__sunrisesunset">
               Sunrise {timeBuilder(sys.sunrise, timezone)} | Sunset{" "}
@@ -93,11 +134,7 @@ export const WeekCard = ({ data, alldata }) => {
 
           <div className="week_card__flexcontainer">
             <div className="week_card__flexcontainer__logo">
-              <img
-                className="week_card__logo"
-                src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
-                alt="weather_logo"
-              />
+              <img className="week_card__logo" src={logo_selector(icon)} alt="weather_logo" />
             </div>
 
             <div className="week_card__flexcontainer__data">
@@ -119,7 +156,7 @@ export const WeekCard = ({ data, alldata }) => {
               </p>
               <p>Wind speed {Math.round(wind_speed)} Km/h</p>
               <p>Pressure {Math.round(pressure)} hpa</p>
-              <p>Humidity {Math.round(humidity)}</p>
+              <p>Humidity {Math.round(humidity)}%</p>
               <p>
                 Sunrise {timeBuilder(sunrise, timezone_offset)} | Sunset{" "}
                 {timeBuilder(sunset, timezone_offset)}

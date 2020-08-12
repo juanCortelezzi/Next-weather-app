@@ -8,7 +8,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 120%;
-  line-height: 130%;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #f9f9f9;
@@ -81,7 +81,6 @@ Form p {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  line-height: 130%;
 }
 
 .main_card__header,
@@ -111,6 +110,10 @@ Form p {
 .week_card__flexcontainer__data {
   margin: 0 1rem;
   text-align: start;
+}
+.week_card__logo,
+.main_card__logo {
+  width: 200px;
 }
 
 .error__main_card,
