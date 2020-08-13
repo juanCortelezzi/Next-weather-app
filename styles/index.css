@@ -80,7 +80,6 @@ Form p {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 .main_card__header,
@@ -111,6 +110,7 @@ Form p {
   margin: 0 1rem;
   text-align: start;
 }
+
 .week_card__logo,
 .main_card__logo {
   width: 200px;
@@ -207,5 +207,31 @@ footer {
   50% {
     transform: scale(1);
     -webkit-transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    font-size: 100%;
+  }
+  Form {
+    width: 100%;
+    margin: 0;
+  }
+  .main_card,
+  .week_card {
+    flex-flow: column nowrap;
+    margin: 1rem 0.5rem;
+  }
+  .main_card__flexcontainer,
+  .week_card__flexcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  .week_card__logo,
+  .main_card__logo {
+    width: 100px;
   }
 }
