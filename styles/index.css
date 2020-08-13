@@ -221,7 +221,7 @@ footer {
   .main_card,
   .week_card {
     flex-flow: column nowrap;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0.7rem;
   }
   .main_card__flexcontainer,
   .week_card__flexcontainer {
