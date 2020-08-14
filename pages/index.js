@@ -3,6 +3,7 @@ import Form from "../components/form.js";
 import { main_apicall, week_apicall } from "../components/apicall.js";
 import { MainCard, WeekCard } from "../components/cards.js";
 
+//return error message when request failed
 const Landing = (props) => {
   if (props.allok !== true)
     return (
@@ -23,6 +24,7 @@ const Landing = (props) => {
 
   const { today_data, week_data } = props;
 
+  //return main App
   return (
     <>
       <Head>
@@ -51,6 +53,7 @@ const Landing = (props) => {
   );
 };
 
+//api call
 export async function getServerSideProps({ query }) {
   if (typeof query.q === "undefined") {
     query.q = "auckland,nz";

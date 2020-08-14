@@ -2,6 +2,7 @@ import validate from "./validate.js";
 import Router from "next/router";
 import { useState, useEffect } from "react";
 import Spinner from "./spinner.js";
+import Help from "./help";
 
 export default function Form() {
   const [q, setq] = useState("");
@@ -50,7 +51,7 @@ export default function Form() {
   }
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
-      <label htmlFor="q">
+      <label htmlFor="q" id="location-logo_wrapper">
         <img id="location-logo" src="/images/location-logo.svg" alt="location logo" />
       </label>
       <input
@@ -61,6 +62,7 @@ export default function Form() {
         onChange={handleChange}
         required
       />
+      <Help />
     </form>
   );
 }

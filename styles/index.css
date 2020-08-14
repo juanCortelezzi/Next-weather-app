@@ -7,7 +7,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 120%;
+  font-size: 130%;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -56,9 +56,33 @@ Form {
   margin-top: 0;
 }
 
+#location-logo_wrapper,
+#questionmark-logo_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#questionmark-logo {
+  cursor: default;
+  width: 30px;
+}
+
 #location-logo {
   cursor: default;
   width: 20px;
+}
+
+#help {
+  position: fixed;
+  right: 3.5rem;
+  left: 3.5rem;
+  top: 45px;
+  margin: 0;
+  padding: 1rem;
+  color: #f9f9f9;
+  background-color: #333;
+  border-radius: 1rem 0 1rem 1rem;
 }
 
 Form input[type="text"] {
@@ -244,5 +268,16 @@ footer {
   .week_card__logo,
   .main_card__logo {
     width: 100px;
+  }
+  #help {
+    position: fixed;
+    right: 2rem;
+    left: 2rem;
+    top: 40px;
+    margin: 0;
+    padding: 1rem;
+    color: #f9f9f9;
+    background-color: #333;
+    border-radius: 1rem 0 1rem 1rem;
   }
 }
