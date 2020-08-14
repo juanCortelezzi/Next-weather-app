@@ -10,7 +10,11 @@ export default async (req, res) => {
       `
 --------------------------------------------------------------------------------
 
-  Get the weather in your terminal !
+  Get The Teather In Your Terminal !!
+
+  curl https://nextweatherapp.herokuapp.com/api/(city)
+
+  Or Indicate The Desired Country For Better Precision Using
 
   curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
 
@@ -22,8 +26,9 @@ export default async (req, res) => {
 
   examples:
   1) https://nextweatherapp.herokuapp.com/api/christchurch,nz
-  2) https://nextweatherapp.herokuapp.com/api/new-york,us
-  3) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
+  2) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
+  3) https://nextweatherapp.herokuapp.com/api/Auckland
+  4) https://nextweatherapp.herokuapp.com/api/new-york
 
 --------------------------------------------------------------------------------
 
@@ -37,12 +42,20 @@ export default async (req, res) => {
       `
 --------------------------------------------------------------------------------
 
+  curl https://nextweatherapp.herokuapp.com/api/(city)
+  
+  Or Indicate The Desired Country For Better Precision Using
+  
   curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
 
-  server error, "${valid.query}" may not a valid country or city.
+--------------------------------------------------------------------------------
 
-  curl https://nextweatherapp.herokuapp.com/api/${valid.query}
+  **** Server Error ****
 
+  "curl https://nextweatherapp.herokuapp.com/api/${valid.query}"
+  
+  May Not A Valid Country Or City.
+  
   please look if the two letter country code is valid, or if the
   city name is correctly spelled.
 
@@ -56,8 +69,9 @@ export default async (req, res) => {
 
   examples:
   1) https://nextweatherapp.herokuapp.com/api/christchurch,nz
-  2) https://nextweatherapp.herokuapp.com/api/new-york,us
-  3) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
+  2) https://nextweatherapp.herokuapp.com/api/buenos-aires,ar
+  3) https://nextweatherapp.herokuapp.com/api/Auckland
+  4) https://nextweatherapp.herokuapp.com/api/new-york
 
 --------------------------------------------------------------------------------
 
@@ -491,9 +505,13 @@ export default async (req, res) => {
     `
 --------------------------------------------------------------------------------
 
+  curl https://nextweatherapp.herokuapp.com/api/(city)
+
   curl https://nextweatherapp.herokuapp.com/api/(city),(two letter country code)
 
-  curl https://nextweatherapp.herokuapp.com/api/${valid.query}
+--------------------------------------------------------------------------------
+
+  You Used: curl https://nextweatherapp.herokuapp.com/api/${valid.query}
 
 --------------------------------------------------------------------------------
 
