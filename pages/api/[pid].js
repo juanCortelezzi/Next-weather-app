@@ -90,121 +90,104 @@ export default async (req, res) => {
       `
   --- ${description} ---
 
-    \\   /         Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-     .-.          Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  - (   ) -       Wind-speed ${speed} km/h
-     \`-'          Humidity ${humidity}% | Pressure ${pressure} HPA
-    /   \\         Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+    \\   /         Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+     .-.          Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  - (   ) -       Wind-speed .. ${speed} km/h
+     \`-'          Humidity .... ${humidity}%
+    /   \\         Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
    .       
-     .-.  *       Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-    (:::)         Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  .  \`-'          Wind-speed ${speed} km/h
-        +         Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+     .-.  *       Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+    (:::)         Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  .  \`-'          Wind-speed .. ${speed} km/h
+        +         Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 
 `,
       `
   --- ${description} ---
 
-    \\  /          Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-  _ /"".-.        Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-    \\_(   ).      Wind-speed ${speed} km/h
-    /(___(__)     Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+    \\  /          Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+  _ /"".-.        Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+    \\_(   ).      Wind-speed .. ${speed} km/h
+    /(___(__)     Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-        *  +      Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-    /;;.-.  .     Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-    \\:(   ).      Wind-speed ${speed} km/h
-  *  (___(__)     Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+        *  +      Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+    /;;.-.  .     Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+    \\:(   ).      Wind-speed .. ${speed} km/h
+  *  (___(__)     Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-      .--.        Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-   .-(    ).      Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  (___.__)__)     Wind-speed ${speed} km/h
-                  Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+      .--.        Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+   .-(    ).      Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  (___.__)__)     Wind-speed .. ${speed} km/h
+                  Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-    .-. .-.       Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-   (   ).  )-.    Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  (___(__)____)   Wind-speed ${speed} km/h
-                  Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+    .-. .-.       Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+   (   ).  )-.    Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  (___(__)____)   Wind-speed .. ${speed} km/h
+                  Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-    .-.           Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-   (   ).         Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  (___(__)        Wind-speed ${speed} km/h
-   ' ' ' '        Humidity ${humidity}% | Pressure ${pressure} HPA
-  ' ' ' '         Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+    .-.           Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+   (   ).         Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  (___(__)        Wind-speed .. ${speed} km/h
+   ' ' ' '        Humidity .... ${humidity}%
+  ' ' ' '         Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-  _\`/"".-.        Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-   ,\\_(   ).      Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-    /(___(__)     Wind-speed ${speed} km/h
-      ' ' ' '     Humidity ${humidity}% | Pressure ${pressure} HPA
-     ' ' ' '      Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+  _\`/"".-.        Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+   ,\\_(   ).      Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+    /(___(__)     Wind-speed .. ${speed} km/h
+      ' ' ' '     Humidity .... ${humidity}%
+     ' ' ' '      Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-   /;;.-.  *      Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-   \\:(   ).       Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-   +(___(__)      Wind-speed ${speed} km/h
-     ' ' ' '      Humidity ${humidity}% | Pressure ${pressure} HPA
-  * ' ' ' '       Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+   /;;.-.  *      Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+   \\:(   ).       Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+   +(___(__)      Wind-speed .. ${speed} km/h
+     ' ' ' '      Humidity .... ${humidity}%
+  * ' ' ' '       Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-     .-.          Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-    (   ).        Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-   (___(__)       Wind-speed ${speed} km/h
-  ,',_//,'        Humidity ${humidity}% | Pressure ${pressure} HPA
-  ,'//\\\\,'        Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+     .-.          Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+    (   ).        Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+   (___(__)       Wind-speed .. ${speed} km/h
+  ,',_//,'        Humidity .... ${humidity}%
+  ,'//\\\\,'        Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )} 
@@ -212,26 +195,22 @@ export default async (req, res) => {
       `
   --- ${description} ---
 
-  __/\\__          Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-  \\_\\/_/          Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-  /_/\\_\\          Wind-speed ${speed} km/h
-    \\/            Humidity ${humidity}% | Pressure ${pressure} HPA                  
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+  __/\\__          Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+  \\_\\/_/          Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+  /_/\\_\\          Wind-speed .. ${speed} km/h
+    \\/            Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA                  
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `
   --- ${description} ---
 
-   _-"- __        Temp ${Math.round(temp)} \*C | Real Feel ${Math.round(feels_like)} \*C
-  _'_-_" -        Min-Max ${Math.round(temp_min)}/${Math.round(temp_max)} \*C
-   "-__--'        Wind-speed ${speed} km/h
-   "---- "        Humidity ${humidity}% | Pressure ${pressure} HPA
-                  Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
-        sunset,
-        timezone
-      )}
+   _-"- __        Temp ........ ${Math.round(temp)} <Feel> ${Math.round(feels_like)} \*C
+  _'_-_" -        Min-Max ..... ${Math.round(temp_min)} / ${Math.round(temp_max)} \*C
+   "-__--'        Wind-speed .. ${speed} km/h
+   "---- "        Humidity .... ${humidity}%
+                  Pressure .... ${pressure} HPA
+                  Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(sunset, timezone)}
 `,
       `No logo here, sorry ... :(`,
     ];
@@ -282,14 +261,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-    \\   /          Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-     .-.           Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  - (   ) -        Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-     \`-'           Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-    /   \\          Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA 
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+    \\   /          Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+     .-.           Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  - (   ) -        Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+     \`-'           Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+    /   \\          Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}% 
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -298,14 +280,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-   .               Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-     .-.  *        Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-    (:::)          Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-  .  \`-'           Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-        +          Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+   .               Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+     .-.  *        Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+    (:::)          Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+  .  \`-'           Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+        +          Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -314,14 +299,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-    \\  /           Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-  _ /"".-.         Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-    \\_(   ).       Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-    /(___(__)      Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+    \\  /           Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+  _ /"".-.         Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+    \\_(   ).       Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+    /(___(__)      Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -330,14 +318,16 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-        *  +       Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-    /;;.-.  .      Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-    \\:(   ).       Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-  *  (___(__)      Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+        *  +       Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+    /;;.-.  .      Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+    \\:(   ).       Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+  *  (___(__)      Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}% | Pressure ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -346,14 +336,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-      .--.         Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-   .-(    ).       Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  (___.__)__)      Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-                   Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+      .--.         Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+   .-(    ).       Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  (___.__)__)      Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+                   Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -362,14 +355,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-    .-. .-.        Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-   (   ).  )-.     Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  (___(__)____)    Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-                   Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+    .-. .-.        Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+   (   ).  )-.     Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  (___(__)____)    Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+                   Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -378,14 +374,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-    .-.            Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-   (   ).          Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  (___(__)         Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-   ' ' ' '         Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-  ' ' ' '          Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+    .-.            Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+   (   ).          Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  (___(__)         Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+   ' ' ' '         Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+  ' ' ' '          Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -394,14 +393,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-  _\`/"".-.         Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-   ,\\_(   ).       Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-    /(___(__)      Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-      ' ' ' '      Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-     ' ' ' '       Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+  _\`/"".-.         Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+   ,\\_(   ).       Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+    /(___(__)      Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+      ' ' ' '      Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+     ' ' ' '       Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -410,14 +412,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-  /;;.-.  *        Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-  \\:(   ).         Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  +(___(__)        Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-    ' ' ' '        Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-  *' ' ' '         Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+  /;;.-.  *        Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+  \\:(   ).         Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  +(___(__)        Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+    ' ' ' '        Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+  *' ' ' '         Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -426,14 +431,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-     .-.           Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-    (   ).         Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-   (___(__)        Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-  ,',_//,'         Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-  ,'//\\\\,'         Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+     .-.           Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+    (   ).         Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+   (___(__)        Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+  ,',_//,'         Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+  ,'//\\\\,'         Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -442,14 +450,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-  __/\\__           Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-  \\_\\/_/           Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-  /_/\\_\\           Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-    \\/             Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+  __/\\__           Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+  \\_\\/_/           Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+  /_/\\_\\           Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+    \\/             Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
@@ -458,14 +469,17 @@ export default async (req, res) => {
     --- ${dateBuilder(dt, timezone)} ---
     --- ${weather[0].description} ---
 
-                   Min-Max ${Math.round(temp.min)}/${Math.round(temp.max)} \*C
-   _-"- __         Morning ${Math.round(temp.morn)} <=> ${Math.round(feels_like.morn)} \*C
-  _'_-_" -         Day ${Math.round(temp.day)} <=> ${Math.round(feels_like.day)} \*C
-   "-__--'         Eve ${Math.round(temp.eve)} <=> ${Math.round(feels_like.eve)} \*C
-   "---- "         Night ${Math.round(temp.night)} <=> ${Math.round(feels_like.night)} \*C
-                   Wind-speed ${Math.round(wind_speed)} Km/h
-                   Humidity ${humidity}% | Pressure ${pressure} HPA
-                   Sunrise ${timeBuilder(sunrise, timezone)} | Sunset ${timeBuilder(
+                   Min-Max ..... ${Math.round(temp.min)} / ${Math.round(temp.max)} \*C
+   _-"- __         Morning ..... ${Math.round(temp.morn)} <Feel> ${Math.round(feels_like.morn)} \*C
+  _'_-_" -         Day ......... ${Math.round(temp.day)} <Feel> ${Math.round(feels_like.day)} \*C
+   "-__--'         Eve ......... ${Math.round(temp.eve)} <Feel> ${Math.round(feels_like.eve)} \*C
+   "---- "         Night ....... ${Math.round(temp.night)} <Feel> ${Math.round(
+        feels_like.night
+      )} \*C
+                   Wind-speed .. ${Math.round(wind_speed)} Km/h
+                   Humidity .... ${humidity}%
+                   Pressure .... ${pressure} HPA
+                   Sunrise-Set . ${timeBuilder(sunrise, timezone)} | ${timeBuilder(
         sunset,
         timezone
       )}
